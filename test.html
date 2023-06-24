@@ -3,6 +3,7 @@
 <head>
     <title>Session Tracker</title>
     <script>
+        console.log(window.env.GOOGLE_API_KEY)
         // Function to create a cookie
         function createCookie(name, value, days) {
             var expires = '';
@@ -64,10 +65,8 @@ var range = 'Sheet1!A:B'; // replace with the cell range you want to append to
 var accessToken = '<your-access-token>'; // replace with your access token from the API
 $.ajax({
   method: 'POST',
-  url: 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/' + range + ':append?valueInputOption=USER_ENTERED',
-  headers: {
-    'Authorization': 'Bearer ' + accessToken
-  },
+  url: 'test.php',
+  
   data: JSON.stringify(data),
   contentType: 'application/json',
   success: function(response) {

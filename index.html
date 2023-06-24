@@ -188,7 +188,7 @@
         
         <!-- Body content goes here -->
         <button><a href="video.php">Video gallery</a></button>
-        <button><a href="images">Image gallery</a></button>     
+        <button><a href="test.php">Image gallery</a></button>     
         <button><a href="document">Documents</a></button>
         <button><a href="upload">Uploaded file</a></button>
 
@@ -203,49 +203,63 @@ function myFunction() {
     x.className = "header";
   }
 }
+
+
+    // Generate a unique device identifier
+    const uid = () => new Date().getTime().toString(36) + Math.random().toString(36).substr(2);
+
+    // Send data to server
+    const sendData = (buttonName, browserName, browserVersion, browserOS,deviceUid,timestamp )=> {
+      const url = "test.php";
+      
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", url, true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+              console.log(xhr.responseText);
+              console.log(data)
+          }
+      };
+      
+      const data = { timestamp:timestamp, button: buttonName, browser: { name: browserName, version: browserVersion, os: browserOS ,id:deviceUid} };
+      xhr.send(JSON.stringify(data));
+    }
+    
+    // Listen for button clicks
+    document.querySelectorAll("#button_container button").forEach(button => {
+  button.addEventListener("click", event => {
+    const buttonName = event.target.innerText;
+    const browserName = window.navigator.userAgent;
+    const browserVersion = window.navigator.userAgent.split(' ')[1].split('/')[1];
+    if (window.navigator.userAgent.toLowerCase().indexOf("windows") >= 0 )
+     {
+         browserOS = "Windows";
+     } else if(window.navigator.userAgent.toLowerCase().indexOf("mac") >= 0)
+     {
+         browserOS = "Mac";
+     } else if(window.navigator.userAgent.toLowerCase().indexOf("x11") >= 0)
+     {
+         browserOS = "Unix";
+     } else if(window.navigator.userAgent.toLowerCase().indexOf("android") >= 0)
+     {
+         browserOS = "Android";
+     } else if(window.navigator.userAgent.toLowerCase().indexOf("iphone") >= 0)
+     {
+         browserOS = "IPhone";
+     }else{
+         browserOS = "UnKnown, More-Info: "+window.navigator.userAgent;
+     }
+    const deviceUid = localStorage.getItem("deviceUid") || uid();
+    localStorage.setItem("deviceUid", deviceUid);
+    const timestamp = new Date().getTime();
+    sendData(buttonName, browserName, browserVersion, browserOS, deviceUid, timestamp);
+  });
+});
+
 </script>
+
+    
 
 </body>
 </html>
-<!-- cokkie -->
-<!-- // Load the Google API client library and authenticate with OAuth2 credentials
-require_once 'google-api-php-client/vendor/autoload.php';
-$client = new Google_Client();
-$client->setAuthConfig('path/to/credentials.json');
-$client->addScope(Google_Service_Sheets::SPREADSHEETS);
-$service = new Google_Service_Sheets($client);
-
-// Define the spreadsheet ID and sheet name where you want to write the session information
-$spreadsheetId = 'spreadsheet_id';
-$sheetName = 'Sheet1';
-
-// Get the session information from the cookies
-$session_length = $_COOKIE['session_length'];
-$mac_address = $_COOKIE['mac_address'];
-$os_type = $_COOKIE['os_type'];
-$device_type = $_COOKIE['device_type'];
-
-// Format the session start time and end time as readable dates
-$session_start_time = date('Y-m-d H:i:s', $session_length);
-$session_end_time = date('Y-m-d H:i:s');
-
-// Define the values you want to write to the sheet
-$values = [
-    [$session_start_time, $session_end_time, $mac_address, $os_type, $device_type],
-];
-
-// Define the range where you want to write the values
-$range = "$sheetName!A1:E1";
-
-// Create a new request to update the sheet with the session information
-$requestBody = new Google_Service_Sheets_ValueRange([
-    'values' => $values,
-]);
-$params = [
-    'valueInputOption' => 'RAW'
-];
-$result = $service->spreadsheets_values->append($spreadsheetId, $range, $requestBody, $params);
-
-// Print out the result of the update
-printf("%d cells appended.", $result->getUpdates()->getUpdatedCells());
- -->

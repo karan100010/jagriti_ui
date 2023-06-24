@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "communication-hub-390711",
+  "private_key_id": "d9756bfcabcf822cdd194e32acee94fd2d4156a7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDZxYcUWsyaS6wn\nM0PFaxgQ61UEUDgZ0F4VGXGTW3hwjEZtanvAjXlU3Af4oVA9/29fX3R97hAlZAZy\nawmMDR3xCmTYvDldgVUxAqW3WAvOlo9LNM60Pc4Z2n/xmd0pqsPooOk7D2/cfzIY\npeWgfYJFJ7LydeM076sJXMrnNbBcIoMeatAn+fIHIDyzFVrriV3MKrmVCq16l+6f\n1pLWNsJXxnbcovJdRCxPQqYnNAjDsa5cTTOBVAYofK/2qpkB4yy/LTCknrlQe22H\nQ5aY1psSvok41eem4IUwynjG6x/i76EfZ9PHI5QNg2IGJBDroGmqpIIyTi6vmh9O\nNoIHY7HzAgMBAAECggEAWVm/4hydLUOWJ2FT0ajur2Z3M/VcB09kgsC1RnI12Ovd\nK6CQlQEXArfit2MsgruO7TFDoTWvvz+qm4CKYsGxAsiydvDHkrNxilHdP3wrIADL\nW16X3wEq0pXBgBYS1blAd26qMzbSvUQdAFr0++PzMr+mnu+6oOojIYzGnZX8PdiT\nJUQuLZtrxyFxIeicGCLd7daGkkQ0n3lFfaoG+MeXYDVQhP0ckG0NAWX7cWLXyu6E\nLZU/Umf+d2ekiRpU88LJJOUQNVxyCwUhJbJJjKj6Ggaip1G3tjjRL+anSRYIRe29\nUSAbiK1awaWTitlCw8o9pAk53Ln8qQ7C/BuS91xfuQKBgQD57K9ErnDXEI0ESbD2\nyLR41HvWso1xdm2vCnc1mf4DjQNvcT644B3rArVdM9971EpFkqXpBm/DcbsUmHyZ\nfx46ywW9wwG9Ux5EcgZkTiAsZmRXTIw2/oJyeA589XZh34C4CLke54K++NufF1TR\n2g0uj4voPJRMW1eElcqpc700CQKBgQDfEMAsGxAxJ6QwI8zXBY1Gt3uCkrgyE0GF\nfOtI7hKOqwh7tD7WV7RVhpRBZHzQx66EOE0BNFjObDDs3r2CPWuNxyOzlAUnN7VT\n5edt3wzopi+CJb/tzt4tJL7KWQFNrWMo8YoF0rve/JgPeSJMAG76Sbu3Ve1IAwcY\nr8fpqqTNGwKBgQCOiWdYc2iVr7HNTT3pMYSEGSNbyk+S82kQ2JYuctoFKmpYJ60P\nAXruqofHVStTUzrcvQt0gCBDxlxdHa6KWI5kF5/5nvsiAAKWJLXyhQAicm8tvtGF\nF9hL8p7Is7HFlhOyYf86We0ef426CTNtz7+O231+gPZPKhUa39dKl2DECQKBgQCP\n6BaSXcNMcu6RwAbekU5bWPPtgQokBBg5LiX8ntqJ//0xEU+YqGxG4NO0fEepyajk\n1A2ZwVOpmFLX/br00vsYNGjr6YqJin8I6UEsuMFzNgNgS0pO+S6MoTAVCua0Xi+i\nsnEA4LsjWIIhOVzO+1idUAQyetThqFJjssOeE+DOEQKBgQCj75gbbLrDk7jpMkLt\nHHP0MfrxFiHVizr1a0a5unzX6b7YW5IRH1Rf7z52AF9Cu9IhLc4/DYoOheabcDfH\n7C9Zhpd6mWeVvE4KkJQgjnZgTTYJQSXj35LwwcSzQ0IljVMQS+m1aOI8gDF3SkSR\nn2o4EeBYbT6kcknk49OD6AzDZA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "jagriti@communication-hub-390711.iam.gserviceaccount.com",
+  "client_id": "118263001213833848566",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/jagriti%40communication-hub-390711.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
